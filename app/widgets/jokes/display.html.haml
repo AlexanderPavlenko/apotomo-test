@@ -1,0 +1,12 @@
+= widget_div do
+  %h1
+    JokesWidget#display
+  %p
+    Find me in app/widgets/jokes/display.html.haml
+  = form_for :something, :url => url_for_event(:joke), :remote => true do |f|
+    = f.submit
+
+:javascript
+  window.jokesWidget = new JokesWidget();
+  window.jokesWidget.$container = $('#jokes');
+  window.jokesWidget.__load();
