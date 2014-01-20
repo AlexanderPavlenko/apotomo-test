@@ -1,0 +1,3 @@
+%p
+  Something hamly. Answer:
+  = @answer
